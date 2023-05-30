@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moni Market Uganda</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: white;">MONI MARKET UG</a></div>
+            <div class="burger" onclick="toggleNav()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Quick Deals</a></li>
+                <li><a href="phones.html">Phones</a></li>
+                <li><a href="laptops.html">Laptops</a></li>
+                <li><a href="#">Home Appliances</a></li>
+                <li><a href="#">Headsets</a></li>
+                <li><a href="#">Categories</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+
+
+   
+        <div class="card-container">
+          
+
+
+            <div class="card">
+                <img src="images/lp1.png" alt="Phone" onclick="togglePopup(this)" id="imgcd">
+                <h3>Hp Probook 6470b</h3>
+                <h4><i>Ugx 700, 000/</i></h4>
+                <p>500 gb hdd, 6 gb ram ddr3,  14inch screen, fingerprint, cd reader, 3 usb ports, charger available, 2 hours battery, webcam</p>
+                <button onclick="togglePopup(this)">Buy Now</button>
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <h2 id="itemName">Buy Now</h2>
+                        <div class="additional-images">
+                            <img src="images/lp1.png" alt="Phone 2">
+                            <img src="images/lp1.png" alt="Phone 3">
+                            <img src="images/lp1.png" alt="Phone 4">
+                            <img src="images/lp1.png" alt="Phone 4">
+                        </div>
+                        <p>Choose an option:</p>
+                        <button>Call Now</button>
+                        <button>Send Email</button>
+                        <button onclick="togglePopup(this)">Close</button>
+                    </div>
+                </div>
+            </div>
+            
+    
+    
+    
+    
+        
+        </div>
+    
+        
+       
+
+
+
+
+    
+        <footer class="footer" style="z-index: -100;">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>At Moni Market, we pride ourselves on offering top-notch products at unbeatable prices. Our primary goal is to bring you high-quality items without straining your budget. We understand that quality shouldn't come with a hefty price tag, which is why we work tirelessly to source products that meet our strict quality standards while remaining affordable.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Phones</a></li>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Home Appliances</a></li>
+                        <li><a href="#">Headsets</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Solar House, Katwe, Kampala</p>
+                    <p>Email: monimarket@gmail.com</p>
+                    <p>Phone: +256 703 1951 98</p>
+                    <p>Phone: +256 788 2145 23</p>
+                    <p class="footer-developed"><marquee behavior="" direction=""><i>Developed by Monil Dev &copy; 2023</i></marquee></p>
+                </div>
+            </div>
+            
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function toggleNav() {
+            var navLinks = document.querySelector('.nav-links');
+            var burgerLines = document.querySelectorAll('.burger div');
+
+            navLinks.classList.toggle('nav-active');
+
+            burgerLines.forEach(function(line) {
+                line.classList.toggle('toggle');
+            });
+        }
+
+        function togglePopup(button) {
+            var card = button.closest('.card');
+            var itemName = card.querySelector('h3').textContent;
+            var popupContainer = card.querySelector('.popup-container');
+            var popupContent = card.querySelector('.popup-content');
+            var popupItemName = popupContent.querySelector('#itemName');
+            popupItemName.textContent = itemName;
+            card.classList.toggle('open');
+            popupContainer.classList.toggle('open');
+
+        }
+
+
+       
+
+
+
+        
+    </script>
+</body>
+</html>
